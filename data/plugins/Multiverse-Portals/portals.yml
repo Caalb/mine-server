@@ -1,0 +1,10 @@
+portals:
+  wskyblock:
+    entryfee:
+      amount: 0.0
+    safeteleport: true
+    teleportnonplayers: false
+    handlerscript: ''
+    owner: Caalb_
+    location: -220.0,63.0,28.0:-216.0,67.0,28.0
+    world: world
