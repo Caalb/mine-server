@@ -10,10 +10,6 @@
 # Discord: https://www.spigotmc.org/go/discord
 # Forums: http://www.spigotmc.org/
 
-advancements:
-  disable-saving: false
-  disabled:
-  - minecraft:story/disabled
 messages:
   whitelist: You are not whitelisted on this server!
   unknown-command: Unknown command. Type "/help" for help.
@@ -21,7 +17,14 @@ messages:
   outdated-client: Outdated client! Please use {0}
   outdated-server: Outdated server! I'm still on {0}
   restart: Server is restarting
+advancements:
+  disable-saving: false
+  disabled:
+  - minecraft:story/disabled
 settings:
+  timeout-time: 60
+  restart-on-crash: true
+  restart-script: ./start.sh
   save-user-cache-on-stop-only: false
   sample-count: 12
   bungeecord: false
@@ -29,9 +32,6 @@ settings:
   user-cache-size: 1000
   moved-wrongly-threshold: 0.0625
   moved-too-quickly-multiplier: 10.0
-  timeout-time: 60
-  restart-on-crash: true
-  restart-script: ./start.sh
   netty-threads: 4
   attribute:
     maxHealth:
@@ -43,18 +43,6 @@ settings:
   log-villager-deaths: true
   log-named-deaths: true
   debug: false
-commands:
-  tab-complete: 0
-  send-namespaced: true
-  log: true
-  spam-exclusions:
-  - /skill
-  silent-commandblock-console: false
-  replace-commands:
-  - setblock
-  - summon
-  - testforblock
-  - tellraw
 world-settings:
   default:
     below-zero-generation-in-existing-chunks: true
@@ -153,7 +141,6 @@ world-settings:
     seed-portal: 34222645
     seed-ancientcity: 20083232
     seed-trailruins: 83469867
-    seed-trialchambers: 94251327
     seed-buriedtreasure: 10387320
     seed-mineshaft: default
     seed-stronghold: default
@@ -172,6 +159,18 @@ world-settings:
     verbose: false
   worldeditregentempworld:
     verbose: false
+commands:
+  log: true
+  tab-complete: 0
+  send-namespaced: true
+  spam-exclusions:
+  - /skill
+  silent-commandblock-console: false
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
 players:
   disable-saving: false
 config-version: 12
